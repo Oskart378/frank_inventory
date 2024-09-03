@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body class="background">
+    <header>
+        <h1>Francisco is Cooking for You</h1>
+        <p>Inventory System</p>
+    </header>
+    
+    <!-- Add Product Form -->
+    <form id="productForm">
+        <input type="text" id="name" placeholder="Product Name" required>
+        <input type="number" id="price" placeholder="Price" step="0.01" required>
+        <input type="number" id="quantity" placeholder="Quantity" required>
+        <button type="submit">Add Product</button>
+        <p id="formError" style="color: red; display: none;">Please enter valid values. Prices and quantities must be positive.</p>
+    </form>
+    
+    <!-- Product Table -->
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Product rows will be added here -->
+        </tbody>
+    </table>
+    
+    <!-- Total Value Display -->
+    <p id="totalValue">Total Value: $0.00</p>
+</body>
+</html>
