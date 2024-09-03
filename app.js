@@ -8,8 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let editingRow = null; // Track the row being edited
 
-    async function fetchProducts() {
-        const response = await fetch('http://localhost:3000/products');
+    const backendUrl = 'https://frank-inventory.onrender.com'; // Update this with your deployed backend URL
+
+async function fetchProducts() {
+        const response = await fetch(`${backendUrl}/products`);
         const products = await response.json();
         productTable.innerHTML = ''; // Clear the table
         products.forEach(product => {
